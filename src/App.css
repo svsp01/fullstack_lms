@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Lato", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidenav {
+  box-shadow: 10px 50px 80px black;
+  height: 90vh;
+  width: 250px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 20px;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.dropdown-btn.active {
+  background-color: green;
+  color: white;
+}
+
+.dropdown-container.show {
+  display: block;
+}
+
+/* Html Intro styles */
+
+.html-tutorial-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.html-tutorial-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.html-tutorial-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.html-tutorial-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.html-tutorial-list {
+  font-size: 16px;
+  line-height: 1.5;
+  list-style-type: disc;
+  margin-left: 20px;
 }
