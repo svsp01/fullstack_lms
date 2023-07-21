@@ -1,22 +1,24 @@
-import React from 'react'
-import NavTopAdmin from '../smallRoutes/NavTopAdmin'
-import { Outlet } from 'react-router-dom'
-import SidebarAdmin from '../smallRoutes/SideBarAdmin'
+import React from "react";
+import NavTopAdmin from "../smallRoutes/NavTopAdmin";
+import { Outlet } from "react-router-dom";
+import SidebarAdmin from "../smallRoutes/SideBarAdmin";
 
 function Home() {
   return (
     <div>
-      <NavTopAdmin/>
-      <div className='container-fluid p-0 d-flex'>
+      <div className="sticky-top">
+        <NavTopAdmin />
+      </div>
+      <div className="container-fluid p-0 d-flex">
         <div className="">
-        <SidebarAdmin/>
+          <SidebarAdmin />
         </div>
         <div className="container p-5">
-        <Outlet/>
+          <Outlet />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

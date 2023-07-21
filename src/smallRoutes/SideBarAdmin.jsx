@@ -11,7 +11,7 @@ const SidebarAdmin = () => {
         ],
       },
       {
-        title: "Courses",
+        title: "Course Management",
         links: [
           { label: "Add Course", to: "/admin/course" },
           { label: "MERN", to: "/admin/mern" },
@@ -19,7 +19,7 @@ const SidebarAdmin = () => {
         ],
       },
       {
-        title: "User Details",
+        title: "Members Management",
         links: [
           { label: "User Interactions", to: "/admin/users" },
           { label: "Insightes", to: "/admin/insights" },

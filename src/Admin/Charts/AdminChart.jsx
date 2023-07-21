@@ -13,7 +13,7 @@ function AdminChart() {
               <div className="card-body">
                 <h5 className="card-title">Manage Courses</h5>
                 <p className="card-text">
-                  Add, edit, and delete courses available in the LMS.
+                  Add, edit, and delete courses  available in the LMS.
                 </p>
                 <Link to="/admin/courses" className="btn btn-primary">
                   Go to Courses
@@ -26,7 +26,7 @@ function AdminChart() {
               <div className="card-body">
                 <h5 className="card-title">Manage Users</h5>
                 <p className="card-text">
-                  Manage users and their roles within the LMS.
+                  Manage users available in the LMS and their roles within the LMS.
                 </p>
                 <Link to="/admin/users" className="btn btn-primary">
                   Go to Users

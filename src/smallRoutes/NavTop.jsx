@@ -24,6 +24,9 @@ function Navtop() {
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
+          <div className="bg-transparent text-capitalize text-dark px-4 py-2 rounded-4 shadow">
+              user
+            </div>
             <Navbar.Text>
               <Dropdown>
                 <Dropdown.Toggle variant="transparent mx-5" id="dropdown-basic">

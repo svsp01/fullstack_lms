@@ -23,7 +23,9 @@ function NavTopAdmin() {
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            
+            <div className="bg-transparent text-capitalize text-dark p-2 rounded-4 me-4 shadow">
+              admin
+            </div>
             <Navbar.Text>
               <button className="btn btn-warning" onClick={handleClick}>Logout</button>
             </Navbar.Text>
