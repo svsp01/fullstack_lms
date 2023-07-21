@@ -16,7 +16,7 @@ function UserDashboard() {
             <Card  style={{ width: "18rem"}}>
               <Card.Img variant="top" src={mern} />
               <Card.Body >
-                <Card.Title>MERN Stack</Card.Title>
+                <Card.Title >MERN Stack</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
