@@ -13,7 +13,7 @@ function UserWelcome() {
           <div className="col-7 ">
             <div className="container">
               <h1 style={{color:"#29D3B2"}}>MERN Stack</h1>
-              <p>
+              <p >
                 MERN stack is a collection of technologies that enables faster
                 application development. It is used by developers worldwide. The
                 main purpose of using MERN develop dynamic web apps and
@@ -30,7 +30,7 @@ function UserWelcome() {
         <div className="row  pb-4">
           <div className="col-7 ">
             <div className="container">
-              <h3>Feautures of MERN Stack</h3>
+              <h3 style={{color:"#29D3B2"}}>Feautures of MERN Stack</h3>
               <ul>
                 <li>
                   Full-stack JavaScript: The entire stack is built using

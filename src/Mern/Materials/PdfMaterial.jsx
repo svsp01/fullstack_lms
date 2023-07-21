@@ -1,23 +1,19 @@
 import React from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
 
-function PdfMaterial() {
-  const pdfUrl = "../../Images/Begin.pdf";
-
-  const handleDownloadPdf = () => {
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.setAttribute("download", "your_pdf.pdf");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+const PdfViewer = () => {
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   return (
     <div>
-      <embed src={pdfUrl} type="application/pdf" width="400px" height="400px" />
-      <button onClick={handleDownloadPdf}>Download PDF</button>
+      <Document file="../../Images/react.pdf">
+        <Page pageNumber={1} width={800} />
+      </Document>
+      <a href="../../Images/react.pdf" target="_blank" rel="noopener noreferrer">
+        <button>Download PDF</button>
+      </a>
     </div>
   );
-}
+};
 
-export default PdfMaterial;
+export default PdfViewer;
