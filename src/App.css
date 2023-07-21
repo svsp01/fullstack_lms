@@ -2,9 +2,22 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+#Login-back{
+  background-image: url('./Images/joanna.jpg');
+  background-position: center center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+#nav-login{
+  position: fixed;
+  top: 0;
+}
+
 .sidenav {
   box-shadow: 10px 50px 80px black;
-  height: 90vh;
+  height: 120vh;
   width: 250px;
   position: relative;
   top: 0;

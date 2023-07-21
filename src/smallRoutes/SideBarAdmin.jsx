@@ -39,7 +39,7 @@ const SidebarAdmin = () => {
     };
   
     return (
-      <div className="sidenav ">
+      <div className="sidenav">
         {dropdowns.map((dropdown, index) => (
           <div className="dropdown" key={index}>
             <button

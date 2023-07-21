@@ -1,52 +1,36 @@
-import React, { useState } from "react";
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import React, { useState } from 'react';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 
-const CompilerMaterial = () => {
+const Low = () => {
   const [showCompiler, setShowCompiler] = useState(false);
+  const [showCompiler2, setShowCompiler2] = useState(false);
+  
 
   const handlePracticeClick = () => {
     setShowCompiler(true);
   };
 
+  const handlePracticeClick2 = () => {
+    setShowCompiler2(true);
+  };
+  
+
   return (
-    <div >
-      <div className="d-flex justify-content-between align-items-center p-5" style={{ background: "#f2f2f2", padding: "20px" }}>
-        <div>
-        <h2 className="pb-5" style={{ textAlign: "center" }}>HTML Practical Question:</h2>
+    <div>
+      <div style={{ background: '#f2f2f2', padding: '20px' }}>
+        <h2 style={{ textAlign: 'center' }}>HTML Practical Question:</h2>
+        <p style={{ textAlign: 'center' }}>1) Write an HTML program to display hello world.</p>
         
         
-        <pre
-          style={{ textAlign: "center", background: "white", padding: "10px" }}
-        >
-          {`<!DOCTYPE html>
-<html>
-<head>
-  <title>My Webpage</title>
-</head>
-<body>
-  <h1>Welcome to My Webpage</h1>
-  <p>This is a paragraph.</p>
-</body>
-</html>`}
-        </pre>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <button onClick={handlePracticeClick}>Practice</button>
         </div>
-        </div>
         {showCompiler && (
-          <div>
-            <h2 className="pb-5" style={{ textAlign: "center" }}>HTML Online Compiler:</h2>
+          <div className='pt-3'>
+            {/* <h2 style={{ textAlign: 'center' }}>HTML Online Compiler:</h2> */}
             <LiveProvider
-              code="<!DOCTYPE html>
-<html>
-<head>
-  <title>My Webpage</title>
-</head>
-<body>
-  <h1>Welcome to My Webpage</h1>
-  <p>This is a paragraph.</p>
-</body>
-</html>"
+              code="<html></html>
+"
               className="text-center"
             >
               <LiveEditor language="html" className="text-center" />
@@ -55,12 +39,11 @@ const CompilerMaterial = () => {
             </LiveProvider>
           </div>
         )}
-        <br />
-        <br />
-        <br />
+        <br /><br /><br />
       </div>
+      
     </div>
   );
 };
 
-export default CompilerMaterial;
+export default Low;

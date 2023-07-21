@@ -6,10 +6,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import Home from "./Routes/Home";
-import Product from "./Routes/Product";
 import Login from "./Protected/Login";
 import PrivateRoute from "./Protected/PrivateRoute";
-import { AuthProvider } from "./Protected/AuthContext";
 import UserDashboard from "./Routes/UserDashboard";
 import AdminDashboard from "./Routes/AdminDashboard";
 import HtmlTutorial from "./Mern/HTML/IntroHtml";
