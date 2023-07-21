@@ -21,7 +21,7 @@ const SidebarAdmin = () => {
       {
         title: "Members Management",
         links: [
-          { label: "User Interactions", to: "/admin/users" },
+          { label: "Members", to: "/admin/users" },
           { label: "Insightes", to: "/admin/insights" },
           { label: "Comments", to: "/admin/comments" },
         ],

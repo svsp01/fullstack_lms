@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
       console.log("User logged in")
     }
     // Dummy username and password condition for admin
-    else if (userRole === 'admin' && username === 'admin' && password === 'password') {
+    else if (userRole === 'admin' && username === 'admin' && password === '1234admin') {
       setIsAuthenticated(true);
       setRole(userRole);
       console.log("Admin logged in")

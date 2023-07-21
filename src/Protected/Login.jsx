@@ -2,14 +2,17 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "./AuthContext";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "../Routes/Home";
-import NavTopLogin from '../smallRoutes/NavTopLogin';
+import NavTopLogin from "../smallRoutes/NavTopLogin";
 import Footer from "../smallRoutes/Footer";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("user"); // Default role is user
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -58,16 +61,30 @@ const Login = () => {
     }
   };
 
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
   return (
     <>
       <div className="sticky-top">
         <NavTopLogin />
       </div>
 
-      <div className="container-fluid" style={{ width: "100%", height: "90vh" }} id="Login-back">
-        <div className="container d-block py-5 px-4" style={{ width: "400px", backgroundColor: "transparent" }} >
-
-          <form className="form-control border-0 shadow text-light container p-5 text-center" onSubmit={handleSubmit} style={{ backgroundColor: "#00000048" }}>
+      <div
+        className="container-fluid"
+        style={{ width: "100%", height: "90vh" }}
+        id="Login-back"
+      >
+        <div
+          className="container d-block py-5 px-4"
+          style={{ width: "400px", backgroundColor: "transparent" }}
+        >
+          <form
+            className="form-control border-0 shadow text-light container p-5 text-center"
+            onSubmit={handleSubmit}
+            style={{ backgroundColor: "#00000048" }}
+          >
             <h2 className="text-center">Login</h2>
             <div className="pt-4">
               <label className="form-label" htmlFor="username">
@@ -75,27 +92,42 @@ const Login = () => {
               </label>
               <input
                 type="text"
-                
                 id="username"
-                className={`form-control bg-transparent ${usernameError ? 'is-invalid' : ''}`}
+                className={`form-control bg-transparent ${
+                  usernameError ? "is-invalid" : ""
+                }`}
                 value={username}
                 onChange={handleUsernameChange}
               />
-              {usernameError && <div className="invalid-feedback">{usernameError}</div>}
+              {usernameError && (
+                <div className="invalid-feedback">{usernameError}</div>
+              )}
             </div>
             <div className="pb-3 pt-3">
               <label className="form-label " htmlFor="password">
                 Password:
               </label>
-              <input
-                type="password"
-                
-                id="password"
-                className={`form-control bg-transparent ${passwordError ? 'is-invalid' : ''}`}
-                value={password}
-                onChange={handlePasswordChange}
-              />
-              {passwordError && <div className="invalid-feedback">{passwordError}</div>}
+              <div className="input-group">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  id="password"
+                  className={`form-control bg-transparent ${
+                    passwordError ? "is-invalid" : ""
+                  }`}
+                  value={password}
+                  onChange={handlePasswordChange}
+                />
+                <button
+                  type="button"
+                  className="btn btn-outline-light"
+                  onClick={togglePasswordVisibility}
+                >
+                  {showPassword ? <RemoveRedEyeIcon /> : <VisibilityOffIcon />}
+                </button>
+              </div>
+              {passwordError && (
+                <div className="invalid-feedback">{passwordError}</div>
+              )}
             </div>
             <div>
               <label className="form-label pt-5" htmlFor="role">
@@ -107,8 +139,12 @@ const Login = () => {
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
               >
-                <option className="bg-dark" value="user">User</option>
-                <option className="bg-dark" value="admin">Admin</option>
+                <option className="bg-dark" value="user">
+                  User
+                </option>
+                <option className="bg-dark" value="admin">
+                  Admin
+                </option>
               </select>
             </div>
             <button type="submit" className="btn btn-outline-light mt-4 ">

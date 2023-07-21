@@ -18,7 +18,7 @@ function Navtop() {
       <Navbar className="bg-body-tertiary shadow-lg">
         <Container>
           <Navbar.Brand>
-            <Link to = "/home">
+            <Link to = "/user">
             <img src={logo} alt="Logo" />
             </Link>
           </Navbar.Brand>
